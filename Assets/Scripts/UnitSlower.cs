@@ -14,7 +14,6 @@ using UnityEngine;
         {
             if (other.CompareTag("Ground"))
             {
-                Debug.Log("Slowed");
                 unit.SlowDown();
             }
         }
@@ -23,7 +22,6 @@ using UnityEngine;
         {
             if (other.CompareTag("Ground"))
             {
-                Debug.Log("Unslowed");
                 unit.Unslow();
             }
         }
