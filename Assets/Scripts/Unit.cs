@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,18 +10,23 @@ public class Unit : MonoBehaviour, ITrampolineable, ICatapultable
         public bool cantMove;
         
         [SerializeField] public float speed = 1f;
+        [SerializeField] public float impulseCooldown = .2f;
         [SerializeField] public Vector3 jumpVector = new Vector3(.2f,1f,0);
         [SerializeField] public Vector3 catapultVector = new Vector3(1f,.5f,0);
         private float currentSpeed;
         [SerializeField] protected float killSelfThreshold = 1f; 
-        [SerializeField] protected Collider2D wallCheck;
+        [SerializeField] protected Transform groundCheck;
         
         protected List<GameObject> jumpies = new List<GameObject>();
         protected List<GameObject> catpults = new List<GameObject>();
-        protected Rigidbody2D rb;
+        public Rigidbody2D rb;
 
         private bool killSelfOngoing = false;
+        private bool checkForGround = false;
         private Collider2D wallCheckCollider;
+        private Collider2D groundCheckCollider;
+
+        public Action WasDestroyed;
 
         public bool CanJump(GameObject caster)
         {
@@ -38,6 +44,21 @@ public class Unit : MonoBehaviour, ITrampolineable, ICatapultable
             rb = GetComponent<Rigidbody2D>();
         }
 
+        private void Update()
+        {
+            if (checkForGround)
+            {
+                groundCheckCollider = Physics2D.OverlapCircle(groundCheck.position, .1f);
+                Debug.Log(groundCheckCollider.tag);
+                if (groundCheckCollider.CompareTag("Ground"))
+                {
+                    cantMove = false;
+                    checkForGround = false;
+                }
+            }
+        }
+        
+
         protected virtual void FixedUpdate()
         {
             if (cantMove) return;
@@ -49,6 +70,11 @@ public class Unit : MonoBehaviour, ITrampolineable, ICatapultable
             // {
             //     StartCoroutine(KillSelf());
             // }
+        }
+
+        private void OnDestroy()
+        {
+            WasDestroyed?.Invoke();
         }
 
         // private IEnumerator KillSelf()
@@ -85,18 +111,26 @@ public class Unit : MonoBehaviour, ITrampolineable, ICatapultable
             if (jumpies.Contains(jumpy)) return;
             else
             {
-                rb.velocity = Vector2.zero;
+                cantMove = true;
+                rb.velocity = Vector3.zero;
                 rb.AddForce(jumpVector * strength, ForceMode2D.Impulse);
                 jumpies.Add(jumpy);
+                StartCoroutine(LeaveGroundThreshold());
             }
         }
-        
+
+        private IEnumerator LeaveGroundThreshold()
+        {
+            yield return new WaitForSeconds(impulseCooldown);
+            checkForGround = true;
+        }
+
         public virtual void Catapult(float strength, GameObject jumpy)
         {
             if (catpults.Contains(jumpy)) return;
             else
             {
-                rb.velocity = Vector2.zero;
+                rb.velocity = Vector3.zero;
                 rb.AddForce(catapultVector* strength, ForceMode2D.Impulse);
                 catpults.Add(jumpy);
             }

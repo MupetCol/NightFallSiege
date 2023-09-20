@@ -8,6 +8,7 @@ TagManager:
   - JumpTrigger
   - Ground
   - CatapultTrigger
+  - UnitDestroyer
   layers:
   - Default
   - TransparentFX

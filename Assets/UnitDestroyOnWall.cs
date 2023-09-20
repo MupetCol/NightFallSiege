@@ -4,10 +4,10 @@ using UnityEngine;
 
     public class UnitDestroyOnWall : MonoBehaviour
     {
-        private void OnCollisionStay2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             Debug.Log(other.gameObject.tag);
-            if (other.gameObject.CompareTag("Ground"))
+            if (other.gameObject.CompareTag("UnitDestroyer"))
             {
                 Destroy(transform.parent.gameObject);
             }

@@ -5,11 +5,9 @@ using UnityEngine.Serialization;
 
 public class UnitStation : MonoBehaviour
     {
-        [SerializeField] private GameObject unit;
         [SerializeField] private float cooldown = 1f;
 
         private bool canBeOccupied = true;
-        private bool hasInit = false;
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -19,25 +17,24 @@ public class UnitStation : MonoBehaviour
             {
                 if (unitScript.canOccupyStation)
                 {
-                    hasInit = true;
+                    canBeOccupied = false;
+                    unitScript.WasDestroyed += RenableStation;
                     unitScript.cantMove = true;
-                    unit = unitScript.gameObject;
-                    canBeOccupied = false;   
+                    unitScript.rb.velocity = Vector3.zero;
                 }
             }
         }
 
-        private void Update()
+        private void RenableStation()
         {
-            if (unit == null && hasInit)
-            {
-                StartCoroutine(RenableStation());
-            }
+            StartCoroutine(RenableStationCor());
         }
 
-        private IEnumerator RenableStation()
+        private IEnumerator RenableStationCor()
         {
+            Debug.Log("Renablin station " + this.gameObject.name);
             yield return new WaitForSeconds(cooldown);
             canBeOccupied = true;
+            Debug.Log("Renabled station " + this.gameObject.name);
         }
     }

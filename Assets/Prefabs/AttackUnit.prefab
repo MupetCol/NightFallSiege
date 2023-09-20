@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.058
       objectReference: {fileID: 0}
+    - target: {fileID: 3923970972898479473, guid: c27b41277946da84b8b445a401edc85b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.299
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923970972898479473, guid: c27b41277946da84b8b445a401edc85b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.072
+      objectReference: {fileID: 0}
     - target: {fileID: 4161711722768528264, guid: c27b41277946da84b8b445a401edc85b, type: 3}
       propertyPath: unit
       value: 
@@ -56,6 +64,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7196111818371669618, guid: c27b41277946da84b8b445a401edc85b, type: 3}
+      propertyPath: m_Radius
+      value: 0.43857342
+      objectReference: {fileID: 0}
+    - target: {fileID: 7196111818371669618, guid: c27b41277946da84b8b445a401edc85b, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.28999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 7196111818371669618, guid: c27b41277946da84b8b445a401edc85b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.44857317
+      objectReference: {fileID: 0}
     - target: {fileID: 8601049375950590936, guid: c27b41277946da84b8b445a401edc85b, type: 3}
       propertyPath: m_Name
       value: AttackUnit
@@ -69,6 +89,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8749383385830467909}
   m_SourcePrefab: {fileID: 100100000, guid: c27b41277946da84b8b445a401edc85b, type: 3}
+--- !u!4 &4548360836343132303 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3923970972898479473, guid: c27b41277946da84b8b445a401edc85b, type: 3}
+  m_PrefabInstance: {fileID: 678839416701664766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9094641267436449318 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8601049375950590936, guid: c27b41277946da84b8b445a401edc85b, type: 3}
@@ -89,7 +114,9 @@ MonoBehaviour:
   canOccupyStation: 0
   cantMove: 0
   speed: 1
+  impulseCooldown: 1
   jumpVector: {x: 0.2, y: 1, z: 0}
   catapultVector: {x: 1, y: 0.5, z: 0}
   killSelfThreshold: 1
-  wallCheck: {fileID: 0}
+  groundCheck: {fileID: 4548360836343132303}
+  rb: {fileID: 0}
