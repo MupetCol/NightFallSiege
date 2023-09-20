@@ -182,7 +182,7 @@ MonoBehaviour:
   canOccupyStation: 1
   cantMove: 0
   speed: 0.5
-  impulseCooldown: 1
+  impulseCooldown: 0.2
   jumpVector: {x: 0.2, y: 1, z: 0}
   catapultVector: {x: 1, y: 0.5, z: 0}
   killSelfThreshold: 1

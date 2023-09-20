@@ -44,12 +44,14 @@ public class Unit : MonoBehaviour, ITrampolineable, ICatapultable
             rb = GetComponent<Rigidbody2D>();
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             if (checkForGround)
             {
                 groundCheckCollider = Physics2D.OverlapCircle(groundCheck.position, .1f);
-                Debug.Log(groundCheckCollider.tag);
+
+                if (groundCheckCollider == null) return;
+                
                 if (groundCheckCollider.CompareTag("Ground"))
                 {
                     cantMove = false;

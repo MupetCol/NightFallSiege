@@ -12,4 +12,9 @@ using UnityEngine;
                 Destroy(gameObject);
             }
         }
+
+        protected override void Update()
+        {
+            base.Update();
+        }
     }

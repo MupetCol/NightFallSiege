@@ -20,8 +20,9 @@ using UnityEngine;
             }
         }
 
-        private void Update()
+        protected override void Update()
         {
+            base.Update();
             if (triggerCount >= maxTriggeredAmount)
             {
                 Destroy(this.gameObject);
