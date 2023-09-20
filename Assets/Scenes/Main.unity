@@ -651,6 +651,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4346164edd39eac4597c5ea074589e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  cooldown: 1
 --- !u!1 &698337568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,6 +1350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4346164edd39eac4597c5ea074589e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  cooldown: 1
 --- !u!1 &1563979093
 GameObject:
   m_ObjectHideFlags: 0
