@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{588a3d42-703d-4271-ad8c-8cdf56482e01}">
+		<property name="assetPath">
+			<value>Clarinetes noche_oboe.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>110.63333333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{72e136f5-80ad-4b32-b34d-4b2a74dbde8d}</destination>
+		</relationship>
+	</object>
+</objects>

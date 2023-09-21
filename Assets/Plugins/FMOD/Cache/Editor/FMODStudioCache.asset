@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7444266252221883950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/GameplayAmbience/dayState
+  m_EditorClassIdentifier: 
+  Name: dayState
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 144732960
+    data2: 2403355537
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-7141342663935864077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,11 +39,64 @@ MonoBehaviour:
   Path: Assets/Audio/FMODProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638308317280000000
+  lastModified: 638309241040000000
   FileSizes:
   - Name: Desktop
-    Value: 712
+    Value: 1070
   Exists: 1
+--- !u!114 &-5558502994359525763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/GameplayAmbience/End
+  m_EditorClassIdentifier: 
+  Name: End
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1044403177
+    data2: 307691663
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3520324566064034072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GameplayAmbience
+  m_EditorClassIdentifier: 
+  Path: event:/GameplayAmbience
+  Guid:
+    Data1: 2094576701
+    Data2: 1287117560
+    Data3: -1552398933
+    Data4: 695905219
+  Banks:
+  - {fileID: 2157640335709674255}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7444266252221883950}
+  - {fileID: -5558502994359525763}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 110633
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,14 +112,44 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -7141342663935864077}
   - {fileID: 2157640335709674255}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: -3520324566064034072}
+  - {fileID: 1402621536801605940}
+  - {fileID: 7766577589222318410}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2157640335709674255}
   StringsBanks:
   - {fileID: -7141342663935864077}
-  cacheTime: 638308317280000000
+  cacheTime: 638309241040000000
   cacheVersion: 131607
+--- !u!114 &1402621536801605940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GameplayMusic
+  m_EditorClassIdentifier: 
+  Path: event:/GameplayMusic
+  Guid:
+    Data1: 1401075538
+    Data2: 1155918866
+    Data3: -994415433
+    Data4: 1522849868
+  Banks:
+  - {fileID: 2157640335709674255}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2157640335709674255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,8 +165,35 @@ MonoBehaviour:
   Path: Assets/Audio/FMODProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638308317280000000
+  lastModified: 638309241040000000
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 2888256
   Exists: 1
+--- !u!114 &7766577589222318410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UnitVoice
+  m_EditorClassIdentifier: 
+  Path: event:/UnitVoice
+  Guid:
+    Data1: -1848467575
+    Data2: 1199357336
+    Data3: 824469393
+    Data4: 1378082147
+  Banks:
+  - {fileID: 2157640335709674255}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
