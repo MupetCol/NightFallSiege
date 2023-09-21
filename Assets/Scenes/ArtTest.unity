@@ -663,8 +663,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 377583851}
-  - component: {fileID: 377583854}
   - component: {fileID: 377583853}
+  - component: {fileID: 377583854}
   - component: {fileID: 377583852}
   m_Layer: 5
   m_Name: TimerTMP
@@ -798,10 +798,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 377583850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 576a4ef9a65cf164ea6a4d8fadc6a3e6, type: 3}
+  m_Script: {fileID: 11500000, guid: cb6b9fe5ea6042b49b84270a3966de93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 10
+  maxTime: 70
+  text: {fileID: 377583852}
 --- !u!1 &437627655
 GameObject:
   m_ObjectHideFlags: 0
@@ -10924,13 +10925,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2037020681}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c639bfcbbefb6584f853d480cda23a66, type: 3}
+  m_Script: {fileID: 11500000, guid: 7801690b79913ef4da4254e4ddb09dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  from: {fileID: 2005417516}
-  to: {fileID: 319828263}
-  timer: {fileID: 377583854}
-  constantSkyChildren:
+  levelTimer: {fileID: 377583854}
+  children:
   - {fileID: 1187484285}
   - {fileID: 986796309}
   - {fileID: 1812535241}
@@ -10945,6 +10944,8 @@ MonoBehaviour:
   - {fileID: 2147178565}
   - {fileID: 689759507}
   - {fileID: 1593397321}
+  startRot: {fileID: 2005417516}
+  endRot: {fileID: 319828263}
 --- !u!1 &2147178563
 GameObject:
   m_ObjectHideFlags: 0
