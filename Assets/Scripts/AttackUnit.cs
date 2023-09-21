@@ -8,7 +8,7 @@ using UnityEngine;
         {
             if (other.transform.TryGetComponent(out EnemyBase enBase))
             {
-                enBase.hitPoints--;
+                enBase.BaseHit();
                 Destroy(gameObject);
             }
         }
