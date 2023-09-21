@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{298fbef3-265c-4137-ad64-2b4b32947a61}">
+		<property name="assetPath">
+			<value>Birds, Bird Of Prey, Tawny Owl, Song, Male, Forest Night SND50255.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>198.67466666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{72e136f5-80ad-4b32-b34d-4b2a74dbde8d}</destination>
+		</relationship>
+	</object>
+</objects>
