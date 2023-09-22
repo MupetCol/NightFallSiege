@@ -8,26 +8,35 @@ using UnityEngine;
         [SerializeField] private GameObject[] objectsToEnable;
         [SerializeField] private float lerpZoomTime, lerpMovementTime;
         [SerializeField] private CinemachineVirtualCamera virtualCamera;
+        //Audio
+        [SerializeField] private AudioManager audioManager;
 
-        private LerpRotationOnTimer skyRotation;
+    private LerpRotationOnTimer skyRotation;
         private float zoomTimer, posTimer;
         private bool doZoom, doMove;
         private Camera cam;
+    
         
         public float startZoom, endZoom;
         public Transform start, end;
 
         private void Awake()
         {
+            
             cam = Camera.main;
             skyRotation = FindObjectOfType<LerpRotationOnTimer>();
-        }
+
+            //Audio
+            audioManager.playAmbience();
+    }
 
         public void StartGame()
         {
             LerpCameraPos();
             LerpCameraZoom();
-        }
+            //Audio
+            audioManager.playMusic();
+    }
 
         private void LerpCameraZoom()
         {

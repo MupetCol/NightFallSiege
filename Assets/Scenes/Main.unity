@@ -742,7 +742,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.2
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1:00
+  m_text: 3:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1158,7 +1158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb6b9fe5ea6042b49b84270a3966de93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 70
+  maxTime: 180
   text: {fileID: 377583852}
 --- !u!1 &419056641
 GameObject:
@@ -5293,6 +5293,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754977108}
   m_CullTransparentMesh: 1
+--- !u!1 &812127938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 812127940}
+  - component: {fileID: 812127939}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &812127939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812127938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe08552437fb374bb222b95c386f048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &812127940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812127938}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &812294403
 GameObject:
   m_ObjectHideFlags: 0
@@ -5499,7 +5543,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5.2
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -11109,6 +11153,7 @@ MonoBehaviour:
   lerpZoomTime: 2
   lerpMovementTime: 2
   virtualCamera: {fileID: 839438319}
+  audioManager: {fileID: 812127939}
   startZoom: 5.2
   endZoom: 10
   start: {fileID: 969530998}
@@ -12900,6 +12945,7 @@ MonoBehaviour:
   - {fileID: 1593397321}
   startRot: {fileID: 2005417516}
   endRot: {fileID: 319828263}
+  audioManager: {fileID: 812127939}
 --- !u!1 &2057251865
 GameObject:
   m_ObjectHideFlags: 0
@@ -13053,6 +13099,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 283389783}
+  - {fileID: 812127940}
   - {fileID: 1284004074}
   - {fileID: 1122202083}
   - {fileID: 110864558}

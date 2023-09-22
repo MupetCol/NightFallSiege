@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{d8f91fc0-60d0-48f8-ad6c-6ce9a4eb7dbc}">
+		<property name="name">
+			<value>Time Progress</value>
+		</property>
+		<relationship name="folder">
+			<destination>{42d7f39e-5d50-4b70-9f1c-dc685c15b024}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{379e7a86-593f-4182-8fe4-1170c697cd03}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{379e7a86-593f-4182-8fe4-1170c697cd03}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

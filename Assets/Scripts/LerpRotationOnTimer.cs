@@ -8,8 +8,10 @@ public class LerpRotationOnTimer : MonoBehaviour
         [SerializeField] private Timer levelTimer;
         [SerializeField] private Transform[] children;
         [SerializeField] private Transform startRot, endRot;
+        //Audio
+        [SerializeField] private AudioManager audioManager;
 
-        private List<float> startChildrenRotations = new List<float>();
+    private List<float> startChildrenRotations = new List<float>();
         private float timeCount;
 
         private void Start()
@@ -25,7 +27,16 @@ public class LerpRotationOnTimer : MonoBehaviour
             
             
             transform.rotation = Quaternion.Lerp(startRot.rotation, endRot.rotation, timeCount/levelTimer.maxTime);
+            //Audio
+            audioManager.changeMusicState(timeCount / levelTimer.maxTime);
+            audioManager.changeAmbienceState(timeCount / levelTimer.maxTime);
+
             timeCount += Time.deltaTime;
+
+
+            if (timeCount / levelTimer.maxTime >= 0.99) {
+                audioManager.endMusic(1);
+            }
         }
 
         private void LateUpdate()
