@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -16,9 +17,11 @@ public class Unit : MonoBehaviour, ITrampolineable, ICatapultable
         private float currentSpeed;
         [SerializeField] protected float killSelfThreshold = 1f; 
         [SerializeField] protected Transform groundCheck;
+        [SerializeField] protected GameObject particleExplosion;
         
         protected List<GameObject> jumpies = new List<GameObject>();
         protected List<GameObject> catpults = new List<GameObject>();
+        protected bool canInteract = true;
         public Rigidbody2D rb;
 
         private bool killSelfOngoing = false;
@@ -38,7 +41,7 @@ public class Unit : MonoBehaviour, ITrampolineable, ICatapultable
             return catpults.Contains(caster);
         }
 
-        void Awake()
+        protected virtual void Awake()
         {
             currentSpeed = speed;
             rb = GetComponent<Rigidbody2D>();
@@ -76,6 +79,7 @@ public class Unit : MonoBehaviour, ITrampolineable, ICatapultable
 
         private void OnDestroy()
         {
+            var ps = Instantiate(particleExplosion, transform.position, quaternion.identity);
             WasDestroyed?.Invoke();
         }
 

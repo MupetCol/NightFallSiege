@@ -474,4 +474,5 @@ MonoBehaviour:
   catapultVector: {x: 1, y: 0.75, z: 0}
   killSelfThreshold: 1
   groundCheck: {fileID: 3923970972898479473}
+  particleExplosion: {fileID: 7731754619029116348, guid: 44c2a535d2e490a49868ab7b1c6f9f60, type: 3}
   rb: {fileID: 0}
