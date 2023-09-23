@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{97d4bfc7-325f-41b9-8cc6-baafae3a6f77}">
+		<property name="assetPath">
+			<value>Steps Grass - Trimmed.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.28125</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{72e136f5-80ad-4b32-b34d-4b2a74dbde8d}</destination>
+		</relationship>
+	</object>
+</objects>

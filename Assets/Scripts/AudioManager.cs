@@ -23,7 +23,7 @@ public class AudioManager : MonoBehaviour
     }
 
     //0- Reproduce musica noche 1- reproduce musica día. Con un gradiente se hace una transición suave
-    public void changeMusicState( float state) {
+    public void setMusicState( float state) {
         gameMusic.setParameterByName("timeProgress", state);
     }
 
@@ -41,7 +41,7 @@ public class AudioManager : MonoBehaviour
     }
 
     //0- Reproduce ambiente noche 1- reproduce ambiente día. Con un gradiente se hace una transición suave
-    public void changeAmbienceState(float state)
+    public void setAmbienceState(float state)
     {
         gameAmbience.setParameterByName("dayState", state);
     }

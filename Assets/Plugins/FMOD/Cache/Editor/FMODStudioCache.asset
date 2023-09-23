@@ -39,10 +39,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMODProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638309829440000000
+  lastModified: 638310919480000000
   FileSizes:
   - Name: Desktop
-    Value: 1114
+    Value: 1302
   Exists: 1
 --- !u!114 &-3520324566064034072
 MonoBehaviour:
@@ -72,6 +72,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 198674
+--- !u!114 &-2492349148357951217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AttackUnitSteps
+  m_EditorClassIdentifier: 
+  Path: event:/AttackUnitSteps
+  Guid:
+    Data1: -103502263
+    Data2: 1076055760
+    Data3: 1574065588
+    Data4: -1896314962
+  Banks:
+  - {fileID: 2157640335709674255}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 875
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,13 +118,44 @@ MonoBehaviour:
   - {fileID: -3520324566064034072}
   - {fileID: 1402621536801605940}
   - {fileID: 7766577589222318410}
+  - {fileID: -2492349148357951217}
+  - {fileID: 3979963680673603863}
+  - {fileID: 796587558326329818}
+  - {fileID: 2126986951269796290}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2157640335709674255}
   StringsBanks:
   - {fileID: -7141342663935864077}
-  cacheTime: 638309829440000000
+  cacheTime: 638310919480000000
   cacheVersion: 131607
+--- !u!114 &796587558326329818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CatapultUnitLaunch
+  m_EditorClassIdentifier: 
+  Path: event:/CatapultUnitLaunch
+  Guid:
+    Data1: 893534282
+    Data2: 1288032597
+    Data3: 920470151
+    Data4: 1714237259
+  Banks:
+  - {fileID: 2157640335709674255}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 726
 --- !u!114 &1402621536801605940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +185,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 112615
+--- !u!114 &2126986951269796290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CatapultUnitSteps
+  m_EditorClassIdentifier: 
+  Path: event:/CatapultUnitSteps
+  Guid:
+    Data1: 1333341272
+    Data2: 1328520841
+    Data3: -2024591729
+    Data4: -547021914
+  Banks:
+  - {fileID: 2157640335709674255}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7270
 --- !u!114 &2157640335709674255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,10 +227,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMODProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638309829440000000
+  lastModified: 638310919480000000
   FileSizes:
   - Name: Desktop
-    Value: 10954208
+    Value: 11108320
   Exists: 1
 --- !u!114 &3778134289128193090
 MonoBehaviour:
@@ -171,6 +256,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3979963680673603863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SpringUnitSteps
+  m_EditorClassIdentifier: 
+  Path: event:/SpringUnitSteps
+  Guid:
+    Data1: 1582776922
+    Data2: 1078697820
+    Data3: 1197769355
+    Data4: 400739257
+  Banks:
+  - {fileID: 2157640335709674255}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 875
 --- !u!114 &4603134303848395491
 MonoBehaviour:
   m_ObjectHideFlags: 0

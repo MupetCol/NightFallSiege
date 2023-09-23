@@ -28,8 +28,8 @@ public class LerpRotationOnTimer : MonoBehaviour
             
             transform.rotation = Quaternion.Lerp(startRot.rotation, endRot.rotation, timeCount/levelTimer.maxTime);
             //Audio
-            audioManager.changeMusicState(timeCount / levelTimer.maxTime);
-            audioManager.changeAmbienceState(timeCount / levelTimer.maxTime);
+            audioManager.setMusicState(timeCount / levelTimer.maxTime);
+            audioManager.setAmbienceState(timeCount / levelTimer.maxTime);
 
             timeCount += Time.deltaTime;
 
