@@ -12,6 +12,8 @@ public class AudioManager : MonoBehaviour
     FMOD.Studio.EventInstance catapultUnitSteps;
     FMOD.Studio.EventInstance bounce;
     FMOD.Studio.EventInstance buttonPressed;
+    FMOD.Studio.EventInstance buttonRelease;
+    FMOD.Studio.EventInstance bombButton;
 
     private void Awake()
     {
@@ -22,6 +24,8 @@ public class AudioManager : MonoBehaviour
         catapultUnitSteps = FMODUnity.RuntimeManager.CreateInstance("event:/CatapultUnitSteps");
         bounce = FMODUnity.RuntimeManager.CreateInstance("event:/Bounce");
         buttonPressed = FMODUnity.RuntimeManager.CreateInstance("event:/ButtonPressed");
+        buttonRelease = FMODUnity.RuntimeManager.CreateInstance("event:/ButtonRelease");
+        bombButton = FMODUnity.RuntimeManager.CreateInstance("event:/BombButton");
     }
 
     public void playMusic() {
@@ -61,5 +65,11 @@ public class AudioManager : MonoBehaviour
     } 
     public void playButtonPressed() {
         buttonPressed.start();
+    } 
+    public void playButtonReleased() {
+        buttonRelease.start();
+    } 
+    public void playBombButton() {
+        bombButton.start();
     }
 }
