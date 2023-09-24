@@ -7,11 +7,21 @@ public class AudioManager : MonoBehaviour
 
     FMOD.Studio.EventInstance gameMusic;
     FMOD.Studio.EventInstance gameAmbience;
+    FMOD.Studio.EventInstance attackUnitSteps;
+    FMOD.Studio.EventInstance springUnitSteps;
+    FMOD.Studio.EventInstance catapultUnitSteps;
+    FMOD.Studio.EventInstance bounce;
+    FMOD.Studio.EventInstance buttonPressed;
 
     private void Awake()
     {
         gameMusic = FMODUnity.RuntimeManager.CreateInstance("event:/GameplayMusic");
         gameAmbience = FMODUnity.RuntimeManager.CreateInstance("event:/GameplayAmbience");
+        attackUnitSteps = FMODUnity.RuntimeManager.CreateInstance("event:/AttackUnitSteps");
+        springUnitSteps = FMODUnity.RuntimeManager.CreateInstance("event:/SpringUnitSteps");
+        catapultUnitSteps = FMODUnity.RuntimeManager.CreateInstance("event:/CatapultUnitSteps");
+        bounce = FMODUnity.RuntimeManager.CreateInstance("event:/Bounce");
+        buttonPressed = FMODUnity.RuntimeManager.CreateInstance("event:/ButtonPressed");
     }
 
     public void playMusic() {
@@ -44,5 +54,12 @@ public class AudioManager : MonoBehaviour
     public void setAmbienceState(float state)
     {
         gameAmbience.setParameterByName("dayState", state);
+    }
+
+    public void playBounce() {
+        bounce.start();
+    } 
+    public void playButtonPressed() {
+        buttonPressed.start();
     }
 }

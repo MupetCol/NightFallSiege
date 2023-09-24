@@ -7,10 +7,17 @@ using UnityEngine;
         [SerializeField] private int maxTriggeredAmount;
         [SerializeField] public float pushStrength = 1f;
         [SerializeField] private GameObject trigger;
-        
-        private int triggerCount = 0;
+         //Audio
+        private GameObject audioManager;
 
-        private void OnTriggerEnter2D(Collider2D other)
+    private int triggerCount = 0;
+
+    private void Start()
+    {
+        audioManager = GameObject.Find("AudioManager");
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.TryGetComponent(out ITrampolineable unitScript))
             {
@@ -27,6 +34,7 @@ using UnityEngine;
             base.Update();
             if (triggerCount >= maxTriggeredAmount)
             {
+                audioManager.GetComponent<AudioManager>().playBounce();
                 Destroy(this.gameObject);
             }
         }

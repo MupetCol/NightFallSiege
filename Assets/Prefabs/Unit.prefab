@@ -293,6 +293,7 @@ GameObject:
   - component: {fileID: 1765666788508015146}
   - component: {fileID: 3269996492099070761}
   - component: {fileID: 8638860086840589022}
+  - component: {fileID: 6575570957897172661}
   m_Layer: 6
   m_Name: Unit
   m_TagString: Attacker
@@ -476,3 +477,34 @@ MonoBehaviour:
   groundCheck: {fileID: 3923970972898479473}
   particleExplosion: {fileID: 7731754619029116348, guid: 44c2a535d2e490a49868ab7b1c6f9f60, type: 3}
   rb: {fileID: 0}
+--- !u!114 &6575570957897172661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8601049375950590936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1004401361
+      Data2: 1334027791
+      Data3: 660711828
+      Data4: -896788300
+    Path: event:/UnitExplosion
+  Event: 
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
