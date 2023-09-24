@@ -148,6 +148,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8178906332358694534, guid: c27b41277946da84b8b445a401edc85b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.244
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178906332358694534, guid: c27b41277946da84b8b445a401edc85b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.326
+      objectReference: {fileID: 0}
     - target: {fileID: 8601049375950590936, guid: c27b41277946da84b8b445a401edc85b, type: 3}
       propertyPath: m_Name
       value: TrampolineUNit
